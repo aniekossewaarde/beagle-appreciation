@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boone the amazing Beagle</title>
+    <style>
+      body {
+        background: whitesmoke;
+      }
+
+      div {
+        color: #392f2f;
+        margin: 100px;
+        padding: 50px;
+        background: linear-gradient(
+          to top,
+          #d5d4d0 0%,
+          #d5d4d0 1%,
+          #eeeeec 31%,
+          #efeeec 75%,
+          #e9e9e7 100%
+        );
+        border: solid 1px #975a5e;
+        border-radius: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        background: whitesmoke;
+        border: 1px solid #975a5e;
+        border-radius: 20px;
+        margin: 5px 80px;
+        font-size: 40px;
+        padding: 10px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      h2 {
+        text-align: center;
+        font-weight: 300;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+      }
+
+      p {
+        line-height: 1.5;
+        padding: 1px 80px;
+        margin: 0px;
+      }
+
+      hr {
+        margin: 10px 80px;
+      }
+
+      button {
+        display: block;
+        margin: 15px auto;
+        font-size: 20px;
+        padding: 20px 35px;
+        border: none;
+        border-radius: 20px;
+        background: whitesmoke;
+        color: #392f2f;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background: #975a5e;
+        color: whitesmoke;
+      }
+
+      .behaviour {
+        color: #975a5e;
+        font-style: italic;
+      }
+      .information {
+        text-decoration: none;
+        color: #392f2f;
+      }
+      .information:hover {
+        text-decoration: underline;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Boone the amazing Beagle</h1>
+      <h2>'all beagles are awesome'</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/049/192/original/IMG_3512.jpg?1666098447"
+        alt="Boone"
+      />
+      <hr />
+      <p>
+        Boone is a beagle born in September of 2021. He is of the bigger variety
+        and has a tricolored coat. His character is playfull, energetic and he
+        is
+        <strong><em>always</em></strong> hungry! Whenever he gets the chance
+        he'll chew up all shoes in sight and doesn't mind munching on any
+        houseplants either. Boone is cuddly, friendly and so very loud.
+        <span class="behaviour">Which all is totally normal for beagles!</span>
+        <br />
+        <br />
+        <a
+          href="https://en.wikipedia.org/wiki/Beagle"
+          target="_blank"
+          class="information"
+        >
+          Find out more about this breed
+        </a>
+      </p>
+      <hr />
+      <button>Request a playdate!</button>
+    </div>
+    <script>
+      function request() {
+        let location = prompt("Where are you located?");
+        location = location.toLowerCase();
+        if (location === "barcelona") {
+          let email = prompt("What is your email address?");
+          alert("Thank you! We will get in contact with you via email 🐶");
+        } else {
+          alert("Sorry, you are to far away for a physical meet-up 😔");
+        }
+      }
+
+      let RequestButton = document.querySelector("button");
+      RequestButton.addEventListener("click", request);
+    </script>
+  </body>
+</html>
